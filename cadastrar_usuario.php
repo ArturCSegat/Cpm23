@@ -2,12 +2,14 @@
     <head>
         <title>Cadastrar Usuário</title>
     </head>
+    <link rel="stylesheet" href="css/geral.css"/>
+
     <body>
         <?php
         @$cod = $_REQUEST['cod'];
-                    if (isset($cod)) {
-                        if ($cod == '01') {
-                            echo ('<h1>Cadastre-se</h1>
+        if (isset($cod)) {
+            if ($cod == '01') {
+                echo ('<h1>Cadastre-se</h1>
         <form method = "post">
         <label for = "nome">Nome completo</label><br>
         <input type = "text" id = "nome" name = "nome"><br>
@@ -19,8 +21,8 @@
         <input type = "text" id = "cpf" name = "cpf">
         <input type = "submit" id = "enviar" name = "enviar">
         </form>');
-                        } else if ($cod == '02') {
-                            echo ('<h1>Cadastre-se</h1>
+            } else if ($cod == '02') {
+                echo ('<h1>Cadastre-se</h1>
         <form method = "post">
         <label for = "nome">Nome completo</label><br>
         <input type = "text" id = "nome" name = "nome"><br>
@@ -32,10 +34,8 @@
         <input type = "text" id = "cpf" name = "cpf">
         <input type = "submit" id = "enviar" name = "enviar">
         </form>');
-                        }
-                    }
-
-        
+            }
+        }
         ?>
 
     </body>

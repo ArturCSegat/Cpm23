@@ -7,7 +7,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     <head>
         <meta charset="UTF-8">
         <title>Olá</title>
+        <link rel="stylesheet" href="css/geral.css"/>
     </head>
+    
+    
     <body>
         <h1>Seja bem vindo!</h1>
         <h2>Entrar como</h2>

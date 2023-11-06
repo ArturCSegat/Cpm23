@@ -12,9 +12,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <script src="js/jquery-3.7.0.min.js" type="text/javascript"></script>
         <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="css/geral.css"/>
+
     </head>
     <body>
-        <form  method="post" action="controller/loginController.php">   
+        <form  method="post" action="controller/login_Cliente_Controller.php">   
             <div class="row" style="border: 2px solid black;
                  margin: 30px 30px 30px 30px; padding: 20px ">
                 <div class="mb-3 mt-3">
@@ -41,7 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                            class="btn btn-danger" >
                 </div>
                 <div class="d-grid">
-                    
+
                     <?php
                     //capturavam a variável query string "cod"
                     @$cod = $_REQUEST['cod'];
