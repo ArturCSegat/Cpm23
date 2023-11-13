@@ -1,18 +1,12 @@
 <?php
-class Cozinheiro {
-	public int $id;
-
+class Cozinheiro extends Cliente {
 	public function __construct(
-		public string $name,
-		private string $email,
-		private string $senha,
 		public int $faixa_preco,
 		public int $avaliacao,
-		public string $endereco,
 		public string $categoria,
 	){}
 
-    public function validarCozinheiro() {
+    public function validar() {
         $db = new ConexaoMysql();
         $db->Conectar();
 
@@ -27,12 +21,14 @@ class Cozinheiro {
         return false;
     }
 
-    public function inserirConta() {
+    public function inserir() {
        $db = new ConexaoMysql();
        $db->Conectar();
 
        $query = 'INSERT INTO cozinheiro(nome, email, senha, faixa_preco, avaliacao, endereco, categoria)
-	       value("'.$this->email.'",
+	       value(
+			"'.$this->name.'",
+			"'.$this->email.'",
 		    "'.$this->senha.'",
 			'.$this->faixa_preco.',
 			'.$this->avaliacao.',
