@@ -3,7 +3,7 @@ class ConexaoMysql {
     protected $mysqli;
     protected $server = '127.0.0.1';
     protected $user = 'artur';
-    protected $pass = '@123123123';
+    protected $pass = '123123123';
     protected $dataBase = 'cpm23';
 
     public $total = 0;

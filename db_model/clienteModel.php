@@ -1,49 +1,52 @@
 <?php
-class Cliente {
-	public int $id;
 
-	public function __construct(
-		public string $name = "",
-		private string $email,
-		private string $senha,
-		public string $endereco = "",
-	){}
+   require_once("conexaoMysql.php");
 
-    public function validar() {
-        $db = new ConexaoMysql();
-        $db->Conectar();
+   class Cliente {
+      public int $id;
 
-        $sql = 'SELECT * FROM cliente WHERE email = "'.$this->email.'" and senha = "'.$this->senha.'";';
-        $cliente = $db->Consultar($sql)->fetch_assoc();
+      public function __construct(
+         private string $email,
+         private string $senha,
+         public string $nome = "",
+         public string $endereco = "",
+      ){}
 
-        $db->Desconectar();
-        if ($db->total == 1) {
-           $this->id = $cliente['id'];
-           $this->name = $cliente['name'];
-           $this->endereco = $cliente['endereco'];
-           return true;
-        }
-        return false;
-    }
+      public function validar() {
+         $db = new ConexaoMysql();
+         $db->Conectar();
 
-    public function inserir() {
-       $db = new ConexaoMysql();
-       $db->Conectar();
+         $sql = 'SELECT * FROM cliente WHERE email = "'.$this->email.'" and senha = "'.$this->senha.'";';
+         $cliente = $db->Consultar($sql)->fetch_assoc();
 
-       $query = 'INSERT INTO cliente(nome, email, senha, endereco)
-	       value(
-            "'.$this->name.'",
+         $db->Desconectar();
+         if ($db->total == 1) {
+            $this->id = $cliente['id'];
+            $this->nome = $cliente['nome'];
+            $this->endereco = $cliente['endereco'];
+            return true;
+         }
+         return false;
+      }
+
+      public function inserir() {
+         $db = new ConexaoMysql();
+         $db->Conectar();
+
+         $query = 'INSERT INTO cliente(nome, email, senha, endereco)
+         value(
+            "'.$this->nome.'",
             "'.$this->email.'",
-		    "'.$this->senha.'",
-			"'.$this->endereco.'");';
-       try {
-          $db->Executar($query);
-       } catch (Exception $e) {
-          echo $e->getMessage();
-          return;
-       }
-       $db->Desconectar();
-       return $db->total;
-    }
-}
-?>
+            "'.$this->senha.'",
+            "'.$this->endereco.'");';
+            try {
+               $db->Executar($query);
+            } catch (Exception $e) {
+               echo $e->getMessage();
+               return;
+            }
+            $db->Desconectar();
+            return $db->total;
+         }
+      }
+   ?>
