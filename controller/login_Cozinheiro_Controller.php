@@ -1,5 +1,7 @@
 <?php
 
+require_once("../db_model/cozinheiroMOdel.php");
+
 //Se vier qualquer coisa via get
 if ($_POST) {
     //print_r($_GET);
@@ -7,10 +9,8 @@ if ($_POST) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     
-    //abrir a conexao
-    $dados = array('email'=>'a@a','senha'=>'c');
-    //executar a consulta
-    if ($email == $dados['email'] && $senha == $dados['senha']) {
+    $c = new Cozinheiro($email, $senha);
+    if ($c->validar()) {
         //Login OK
         //header('location:../index.php?email='.$email.'&&senha='.$senha);
         //echo ('Usuário logado com sucesso.');

@@ -1,9 +1,13 @@
 <?php
 class Cozinheiro extends Cliente {
 	public function __construct(
-		public int $faixa_preco,
-		public int $avaliacao,
-		public string $categoria,
+		public string $email,
+		public string $senha,
+		public string $name = "",
+		public string $endereco = "",
+		public int $faixa_preco = 0,
+		public int $avaliacao = 0,
+		public string $categoria = "",
 	){}
 
     public function validar() {
@@ -16,6 +20,11 @@ class Cozinheiro extends Cliente {
         $db->Desconectar();
         if ($db->total == 1) {
            $this->id = $cozinheiro['id'];
+           $this->name = $cozinheiro['name'];
+           $this->endereco = $cozinheiro['endereco'];
+		   $this->faixa_preco = $cozinheiro['faixa_preco'];
+		   $this->avaliacao = $cozinheiro['avaliacao'];
+		   $this->categoria = $cozinheiro['categoria'];
            return true;
         }
         return false;

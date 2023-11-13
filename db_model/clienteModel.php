@@ -3,10 +3,10 @@ class Cliente {
 	public int $id;
 
 	public function __construct(
-		public string $name,
+		public string $name = "",
 		private string $email,
 		private string $senha,
-		public string $endereco,
+		public string $endereco = "",
 	){}
 
     public function validar() {
@@ -14,11 +14,13 @@ class Cliente {
         $db->Conectar();
 
         $sql = 'SELECT * FROM cliente WHERE email = "'.$this->email.'" and senha = "'.$this->senha.'";';
-        $cozinheiro = $db->Consultar($sql)->fetch_assoc();
+        $cliente = $db->Consultar($sql)->fetch_assoc();
 
         $db->Desconectar();
         if ($db->total == 1) {
-           $this->id = $cozinheiro['id'];
+           $this->id = $cliente['id'];
+           $this->name = $cliente['name'];
+           $this->endereco = $cliente['endereco'];
            return true;
         }
         return false;

@@ -1,5 +1,7 @@
 <?php
 
+require_once("../db_model");
+
 //Se vier qualquer coisa via get
 if ($_POST) {
     //print_r($_GET);
@@ -7,17 +9,9 @@ if ($_POST) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     
-    //abrir a conexao
-    $dados = array('email'=>'a@a','senha'=>'c');
-    //executar a consulta
-    if ($email == $dados['email'] && $senha == $dados['senha']) {
-        //Login OK
-        //header('location:../index.php?email='.$email.'&&senha='.$senha);
-        //echo ('Usuário logado com sucesso.');
-        
-        //Abrir a sessão
+    $c = new Cliente(email: $email, senha: $senha);
+    if ($c->validar()) {
         session_start();
-        //Criei a sessão "login"
         $_SESSION['login'] = $email;
         
         header('location:../home_cliente.php');
