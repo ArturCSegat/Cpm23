@@ -6,13 +6,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
-                <link rel="stylesheet" href="css/geral.css"/>
+        <title>Página principal</title>
+        <link rel="stylesheet" href="css/geral.css"/>
 
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <h1>Pedir prato</h1>
+        <form method="post">
+            <label for="nome">Pesquise por nome</label>
+            <input type="text">
+            <label for="nome">Pesquise por ingredientes</label>
+            <input type="text">
+            <input type="submit" value="Buscar">
+            
+            
+        </form>
     </body>
 </html>

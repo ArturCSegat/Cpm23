@@ -13,13 +13,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
         <link rel="stylesheet" href="css/geral.css"/>
-
+        <style>
+            .bonito{
+                margin-top: 150px;
+                width: 400px;
+                border: solid;
+                border-color: #FF944E;
+            }
+            .ola{
+                border: none;
+                color: white;
+                margin-bottom: 4px;
+                width: 300px;
+               text-align: center;
+               background-color: #E8640D;
+            }
+        </style>
     </head>
     <body>
         <form  method="post" action="controller/login_Cliente_Controller.php">   
-            <div class="row" style="border: 2px solid black;
-                 margin: 30px 30px 30px 30px; padding: 20px ">
-                <div class="mb-3 mt-3">
+            <div class="container bonito" >
+                <div>
                     <h1 class="aa">Entrar</h1><br>
                     <label for="email" class="aa">Email:</label>
                     <?php
@@ -38,9 +52,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                     <input type="password" class="form-control" id="senha" 
                            placeholder="Senha" name="senha" required="">
                 </div>
-                <div class="d-grid">
+                <div class="d-grid" style="display:flex; justify-content: center;">
                     <input type="submit" value="Entrar"
-                           class="btn btn-danger" >
+                           class="ola" >
                 </div>
                 <div class="d-grid">
 

@@ -23,7 +23,7 @@ if ($_POST) {
         header('location:../home_cliente.php');
     } else {
         //Login inválido 
-        header('location:../index.php?cod=171');
+        header('location:../entrar_cliente.php?cod=171');
     }
 } else {
     //redireciona para a index
