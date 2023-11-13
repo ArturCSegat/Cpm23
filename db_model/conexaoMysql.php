@@ -4,7 +4,7 @@ class ConexaoMysql {
     protected $server = '127.0.0.1';
     protected $user = 'artur';
     protected $pass = '123123123';
-    protected $dataBase = 'netflix';
+    protected $dataBase = 'cpm23';
 
     public $total = 0;
 
@@ -26,6 +26,7 @@ class ConexaoMysql {
                 return $result;
             }
             $this->total = 0;
+            
             return null;
         } catch (Exception) {
             $this->Desconectar();
