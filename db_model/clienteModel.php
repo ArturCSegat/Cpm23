@@ -4,13 +4,22 @@
 
    class Cliente {
       public int $id;
+      private string $email;
+      private string $senha;
+      public string $nome = "";
+      public string $endereco = "";
 
       public function __construct(
-         private string $email,
-         private string $senha,
-         public string $nome = "",
-         public string $endereco = "",
-      ){}
+         string $email,
+         string $senha,
+         string $nome = "",
+         string $endereco = ""
+      ){
+         $this->email = $email;
+         $this->senha = $senha;
+         $this->nome = $nome;
+         $this->endereco = $endereco;
+      }
 
       public function validar() {
          $db = new ConexaoMysql();

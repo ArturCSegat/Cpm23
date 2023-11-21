@@ -2,8 +2,8 @@
 class ConexaoMysql {
     protected $mysqli;
     protected $server = '127.0.0.1';
-    protected $user = 'artur';
-    protected $pass = '123123123';
+    protected $user = 'root';
+    protected $pass = '@123123123';
     protected $dataBase = 'cpm23';
 
     public $total = 0;
@@ -28,7 +28,7 @@ class ConexaoMysql {
             $this->total = 0;
             
             return null;
-        } catch (Exception) {
+        } catch (Exception $e) {
             $this->Desconectar();
         }
     }
@@ -46,7 +46,7 @@ class ConexaoMysql {
             $this->total = 0;
             throw new Exception('Erro');
 
-         } catch (Exception) {
+         } catch (Exception $e) {
             //Em caso de erro volta ao estado anterior.
             $this->mysqli->rollback();
         }

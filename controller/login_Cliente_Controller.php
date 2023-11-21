@@ -1,6 +1,6 @@
 <?php
 
-require_once("../db_model");
+require_once("../db_model/clienteModel.php");
 
 //Se vier qualquer coisa via get
 if ($_POST) {
@@ -9,7 +9,7 @@ if ($_POST) {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     
-    $c = new Cliente(email: $email, senha: $senha);
+    $c = new Cliente($email, $senha);
     if ($c->validar()) {
         session_start();
         $_SESSION['login'] = $email;

@@ -4,15 +4,30 @@
    require_once("clienteModel.php");
 
    class Cozinheiro extends Cliente {
+      public string $email;
+      public string $senha;
+      public string $nome = "";
+      public string $endereco = "";
+      public int $faixa_preco = 0;
+      public int $avaliacao = 0;
+      public string $categoria = "";
       public function __construct(
-         public string $email,
-         public string $senha,
-         public string $nome = "",
-         public string $endereco = "",
-         public int $faixa_preco = 0,
-         public int $avaliacao = 0,
-         public string $categoria = "",
-      ){}
+         string $email,
+         string $senha,
+         string $nome = "",
+         string $endereco = "",
+         int $faixa_preco = 0,
+         int $avaliacao = 0,
+         string $categoria = ""
+      ){
+         $this->email = $email;
+         $this->senha = $senha;
+         $this->nome = $nome;
+         $this->endereco = $endereco;
+         $this->faixa_preco = $faixa_preco;
+         $this->avaliacao = $avaliacao;
+         $this->categoria = $categoria;
+      }
 
       public function validar() {
          $db = new ConexaoMysql();
