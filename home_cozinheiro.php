@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <script src="js/jquery-3.7.0.min.js" type="text/javascript"></script>
         <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+        <link rel="icon" type="image/x-icon" href="imgs/Cpm 23.png">
         <style>
             label{
                 color:#C24600;
@@ -21,6 +22,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 display: flex;
                 justify-content: center;
                 text-align: center;
+                body{
+                background-position-x: left;
+              background-image: url(imgs/background.png);
+            }
             }
         </style>
     </head>

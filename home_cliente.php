@@ -12,6 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
         <script src="js/jquery-3.7.0.min.js" type="text/javascript"></script>
         <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/x-icon" href="imgs/Cpm 23.png">
         <style>
             .ola{
                 border: none;
@@ -31,6 +32,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             .container{
                 width: 400px;
             }
+            body{
+                background-position-x: left;
+              background-image: url(imgs/background.png);
+            }
             
         </style>
     </head>
@@ -42,6 +47,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 <label for="nome">Pesquise por nome</label>
                 <input type="text" class="form-control">
                 <label for="nome">Pesquise por ingredientes</label>
+                <input type="text" class="form-control">
+                <label for="nome">Pesquise por cozinheiro</label>
                 <input type="text" class="form-control">
                 <div>
                     <input type="submit" value="Buscar" class="ola d-grid">
