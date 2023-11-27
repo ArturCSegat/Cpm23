@@ -47,7 +47,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 <label for="nome">Pesquise por nome do prato</label>
                 <input type="text" class="form-control" name="nome-prato">
                 <label for="nome">Pesquise por nome do cozinheiro</label>
-                <input type="text" class="form-control" name="nome-prato-cozinheiro">
+                <input type="text" class="form-control" name="nome-cozinheiro">
                 <label for="nome">Pesquise por ingredientes</label>
                 <input type="text" class="form-control" name="ingrediente">
                 <div>
