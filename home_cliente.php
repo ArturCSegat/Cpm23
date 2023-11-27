@@ -38,11 +38,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <br>
         <h1>Pedir prato</h1>
         <div class="container">
-            <form method="post">
-                <label for="nome">Pesquise por nome</label>
-                <input type="text" class="form-control">
+            <form method="post" action="pratos.php">
+                <label for="nome">Pesquise por nome do prato</label>
+                <input type="text" class="form-control" name="nome-prato">
+                <label for="nome">Pesquise por nome do cozinheiro</label>
+                <input type="text" class="form-control" name="nome-prato-cozinheiro">
                 <label for="nome">Pesquise por ingredientes</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="ingrediente">
+
                 <div>
                     <input type="submit" value="Buscar" class="ola d-grid">
                 </div>
