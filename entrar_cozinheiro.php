@@ -8,6 +8,7 @@
         <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
         <link rel="stylesheet" href="css/geral.css"/>
+        <link rel="icon" type="image/x-icon" href="imgs/Cpm 23.png">
         <style>
             .bonito{
                 margin-top: 150px;
@@ -22,6 +23,10 @@
                 width: 300px;
                text-align: center;
                background-color: #E8640D;
+            }
+            body{
+                background-position-x: left;
+              background-image: url(imgs/background.png);
             }
         </style>
     </head>

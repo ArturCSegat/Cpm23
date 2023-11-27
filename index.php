@@ -8,6 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <meta charset="UTF-8">
         <title>Olá</title>
         <link rel="stylesheet" href="css/geral.css"/>
+        <link rel="icon" type="image/x-icon" href="imgs/Cpm 23.png">
         <style>
             .bonito{
                 display: flex;
@@ -20,6 +21,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             h1,h2{
                   text-align: center;
             }
+            body{
+                background-position-x: left;
+              background-image: url(imgs/background.png);
+            }
         </style>
     </head>
     <body>
@@ -30,9 +35,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <a href="entrar_cozinheiro.php"><img src="imgs/cozinheiro.png"></a>
         </div>
         <p>É novo aqui?</p>
-        <a href="cadastrar_usuario.php?cod=01">Cadastre-se</a>
+        <a href="cadastrar_cliente.php">Cadastre-se</a>
         <p>Quer ser um cozinheiro?</p>
-        <a href="cadastrar_usuario.php?cod=02">Cadastre-se como cozinheiro</a>
+        <a href="cadastrar_cozinheiro.php">Cadastre-se como cozinheiro</a>
         
         <?php
         // put your code here
