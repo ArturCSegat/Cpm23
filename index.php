@@ -20,6 +20,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             h1,h2{
                   text-align: center;
             }
+            body{
+                background-image: url(imgs/comida.jpg);
+                background-repeat: no-repeat;
+            }
         </style>
     </head>
     <body>
