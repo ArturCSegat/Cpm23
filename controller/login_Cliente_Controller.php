@@ -11,8 +11,7 @@ if ($_POST) {
     
     $c = new Cliente($email, $senha);
     if ($c->validar()) {
-        session_start();
-        $_SESSION['login'] = $email;
+        setcookie('conta_id', $c->id, time()+10000000,'/');
         
         header('location:../home_cliente.php');
     } else {

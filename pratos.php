@@ -23,9 +23,11 @@
                echo (
                   '
                   <div style="display: flex; flex-direction: column; margin: 5%;">
-                     <p>' . $prato["nome"] . '</p>
+                     <h2>'. $prato["nome"] . '</h2>
                      <p>' . $prato["descricao"] . '</p>
                      <p>' . $prato["preco"] . '</p>
+                     <p>' . $prato["cozinheiro"]["email"]. '</p>
+                     <!-- <p>' . $prato["cozinheiro"]["categoria"]. '</p> -->
                   </div>
                   '
                );

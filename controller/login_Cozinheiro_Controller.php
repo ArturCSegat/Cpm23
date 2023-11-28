@@ -22,11 +22,7 @@
          //header('location:../index.php?email='.$email.'&&senha='.$senha);
          //echo ('Usuário logado com sucesso.');
 
-         //Abrir a sessão
-         session_start();
-         //Criei a sessão "login"
-         $_SESSION['login'] = $email;
-
+        setcookie('conta_id', $c->id, time()+10000000,'/');
          header('location:../home_cozinheiro.php');
       } else {
          //Login inválido 

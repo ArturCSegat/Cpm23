@@ -33,15 +33,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <h1>Visualizar pedidos disponíveis</h1>
         <h1>Cadastrar prato</h1>
         <div>
-        <form method="post">
+        <form method="post" action="controller/cadastroPrato.php">
             <label for="nome do prato">Nome do prato</label>
             <input type = "text" id = "nomedoprato" name = "nomedoprato" class="form-control"><br><br>
-            <label for="ingredientes">Ingredientes</label>
+            <label for="ingredientes">Ingredientes e informações gerais</label>
             <input type = "text" id = "ingredientes" name = "ingredientes" class="form-control"><br><br>
             <label for="preço">Preço</label>
             <input type="number" id="preco" name="preco" class="form-control"><br><br>
-            <label for="mais informações">Mais informações</label>
-            <input type="text" id="info " class="form-control"name="info">
 
             <br> <label for="enviar">Enviar informações</label>
             <input type="submit" id="enviar" name="enviar">
@@ -49,8 +47,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
 
         </form>
             </div>
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

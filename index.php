@@ -39,8 +39,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <p>Quer ser um cozinheiro?</p>
         <a href="cadastrar_cozinheiro.php">Cadastre-se como cozinheiro</a>
         
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

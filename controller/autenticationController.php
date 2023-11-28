@@ -1,6 +1,5 @@
 <?php
-session_start();
-//Se não existir a session login
-if(!isset($_SESSION['login'])){
+if(!isset($_COOKIE['conta_id'])){
     header('location:index.php?cod=172');
 }
+?>
