@@ -35,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <div>
         <form method="post" action="controller/cadastroPrato.php">
             <label for="nome do prato">Nome do prato</label>
-            <input type = "text" id = "nomedoprato" name = "nomedoprato" class="form-control"><br><br>
+            <input type = "text" id = "nomedoprato" name = "nome" class="form-control"><br><br>
             <label for="ingredientes">Ingredientes e informações gerais</label>
             <input type = "text" id = "ingredientes" name = "ingredientes" class="form-control"><br><br>
             <label for="preço">Preço</label>
