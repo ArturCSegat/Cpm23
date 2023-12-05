@@ -1,39 +1,89 @@
-<?php 
-   if ($_POST) {
-      $query = "";
+<html>
+    <head>
+        <title>Prato</title>
+        <link rel="stylesheet" href="css/geral.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+        <script src="js/jquery-3.7.0.min.js" type="text/javascript"></script>
+        <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+    </head>
+    <style>
+        body{
+            background-image: url(imgs/background.png);
+        }
+        td, th {
+           font-size: 20px;
+            padding: .7em;
+            margin: 0;
+           
+            text-align: center;
+        }
+ 
+        td{
+            color: black;
 
-      if ($_POST["ingrediente"] != "") {
-         $query = $_POST["ingrediente"];
-      }
-      if ($_POST["nome-cozinheiro"] != "") {
-         $query = $_POST["nome-cozinheiro"];
-      }
-      if ($_POST["nome-prato"] != "") {
-         $query = $_POST["nome-prato"];
-      }
-      
+        }
 
-      require_once("db_model/pratoModel.php");
+        table{
+            width: 100%;
+            margin-bottom : .5em;
+            table-layout: fixed;
+            text-align: center;
+        }
+        
+    </style>
+    <body>
+    </body>
+</html>
 
-      $pratos = Prato::find($query);
+<?php
+if ($_POST) {
+    $query = "";
 
-      if ($pratos != null) {
-         echo '<div style="display: flex; flex-direction: row;"/>';
-            foreach ($pratos as $prato) {
-               echo (
-                  '
-                  <div style="display: flex; flex-direction: column; margin: 5%;">
-                     <h2>'. $prato["nome"] . '</h2>
-                     <p>' . $prato["descricao"] . '</p>
-                     <p>' . $prato["preco"] . '</p>
-                     <p>' . $prato["cozinheiro"]["nome"]. '</p>
-                     <p>' . $prato["cozinheiro"]["categoria"]. '</p>
+    if ($_POST["ingrediente"] != "") {
+        $query = $_POST["ingrediente"];
+    }
+    if ($_POST["nome-cozinheiro"] != "") {
+        $query = $_POST["nome-cozinheiro"];
+    }
+    if ($_POST["nome-prato"] != "") {
+        $query = $_POST["nome-prato"];
+    }
+
+
+    require_once("db_model/pratoModel.php");
+
+    $pratos = Prato::find($query);
+
+    if ($pratos != null) {
+        echo '<div style="display: flex; flex-direction: row;"/>';
+        echo '<div class="tabela">
+                    <table>
+                    <tr>
+                    <th>Nome do prato</th>
+                    <th>Descrição/ingredientes</th>
+                    <th>Preço</th>
+                    <th>Nome do cozinheiro</th>
+                    <th>Categoria</th>
+                    </tr>';
+        foreach ($pratos as $prato) {
+            echo (
+            '
+                 
+                    <tr>
+                     <td>' . $prato["nome"] . '</td>
+                     <td>' . $prato["descricao"] . '</td>
+                     <td>R$ ' . $prato["preco"] . '</td>
+                     <td>' . $prato["cozinheiro"]["nome"] . '</td>
+                     <td>' . $prato["cozinheiro"]["categoria"] . '</td>
+                     </tr>
+                     
                   </div>
                   '
-               );
-            }
-            echo "</div>";
-      }
-   }
-
+            );
+        }
+        echo '</div> </table>';
+    }
+}
 ?>

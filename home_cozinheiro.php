@@ -30,7 +30,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         </style>
     </head>
     <body>
-        <h1>Visualizar pedidos disponíveis</h1>
+      
         <h1>Cadastrar prato</h1>
         <div>
         <form method="post" action="controller/cadastroPrato.php">
