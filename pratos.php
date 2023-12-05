@@ -26,8 +26,8 @@
                      <h2>'. $prato["nome"] . '</h2>
                      <p>' . $prato["descricao"] . '</p>
                      <p>' . $prato["preco"] . '</p>
-                     <p>' . $prato["cozinheiro"]["email"]. '</p>
-                     <!-- <p>' . $prato["cozinheiro"]["categoria"]. '</p> -->
+                     <p>' . $prato["cozinheiro"]["nome"]. '</p>
+                     <p>' . $prato["cozinheiro"]["categoria"]. '</p>
                   </div>
                   '
                );
