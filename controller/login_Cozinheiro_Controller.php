@@ -23,7 +23,8 @@
          //echo ('Usuário logado com sucesso.');
 
         setcookie('conta_id', $c->id, time()+10000000,'/');
-         header('location:../home_cozinheiro.php');
+        setcookie('tipo', 'cozinheiro', time()+10000000,'/');
+        header('location:../home_cozinheiro.php');
       } else {
          //Login inválido 
          header('location:../index.php?cod=171');

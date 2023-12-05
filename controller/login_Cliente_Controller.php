@@ -12,6 +12,7 @@ if ($_POST) {
     $c = new Cliente($email, $senha);
     if ($c->validar()) {
         setcookie('conta_id', $c->id, time()+10000000,'/');
+        setcookie('tipo', 'cliente', time()+10000000,'/');
         
         header('location:../home_cliente.php');
     } else {
