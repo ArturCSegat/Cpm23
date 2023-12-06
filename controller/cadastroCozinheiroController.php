@@ -12,5 +12,6 @@ if ($_POST) {
     // <input type = "submit" id = "enviar" name = "enviar">
     $c = new Cozinheiro($_POST["email"], $_POST["senha"], $_POST["nome"],  $_POST["endereco"], $_POST["faixa-preco"], $_POST["categoria"]);
     $c->inserir();
+    header('location:../home.php');
 }
 ?>

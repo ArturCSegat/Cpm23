@@ -10,5 +10,6 @@ if ($_POST) {
     // <input type = "submit" id = "enviar" name = "enviar">
     $c = new Cliente($_POST["email"], $_POST["senha"], $_POST["nome"],  $_POST["endereco"]);
     $c->inserir();
+    header('location:../home.php');
 }
 ?>

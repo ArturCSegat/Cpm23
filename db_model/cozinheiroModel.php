@@ -9,7 +9,7 @@
       public string $nome = "";
       public string $endereco = "";
       public int $faixa_preco = 0;
-      public int $avaliacao = 0;
+    
       public string $categoria = "";
       public function __construct(
          string $email,
@@ -17,7 +17,7 @@
          string $nome = "",
          string $endereco = "",
          int $faixa_preco = 0,
-         int $avaliacao = 0,
+       
          string $categoria = ""
       ){
          $this->email = $email;
@@ -25,7 +25,7 @@
          $this->nome = $nome;
          $this->endereco = $endereco;
          $this->faixa_preco = $faixa_preco;
-         $this->avaliacao = $avaliacao;
+        
          $this->categoria = $categoria;
       }
 
@@ -42,7 +42,7 @@
             $this->nome = $cozinheiro['nome'];
             $this->endereco = $cozinheiro['endereco'];
             $this->faixa_preco = $cozinheiro['faixa_preco'];
-            $this->avaliacao = $cozinheiro['avaliacao'];
+           
             $this->categoria = $cozinheiro['categoria'];
             return true;
          }
@@ -59,7 +59,7 @@
             "'.$this->email.'",
             "'.$this->senha.'",
             '.$this->faixa_preco.',
-            '.$this->avaliacao.',
+          
             "'.$this->endereco.'",
             "'.$this->categoria.'");';
             try {
