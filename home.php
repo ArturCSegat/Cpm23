@@ -34,6 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         <a href="entrar_cliente.php" ><img src="imgs/Cliente.png"></a>
         <a href="entrar_cozinheiro.php"><img src="imgs/cozinheiro.png"></a>
         </div>
+        
         <p>É novo aqui?</p>
         <a href="cadastrar_cliente.php">Cadastre-se</a>
         <p>Quer ser um cozinheiro?</p>

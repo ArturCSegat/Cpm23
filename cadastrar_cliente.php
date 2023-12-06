@@ -20,7 +20,7 @@
 
             }
             h1{
-                margin-top: 150px;
+                margin-top: 100px;
             }
             .ola{
                 border: none;
@@ -38,10 +38,13 @@
                 background-position-x: left;
               background-image: url(imgs/background.png);
             }
+            a{
+                background: none;
+            }
         </style>
     </head>
     <body>
-
+         <a href="home.php"><img src="imgs/logo.png" width="70px"></a>
         <h1>Cadastre-se</h1>
         <div>
             <form method = "post" action="controller/cadastroClienteController.php">

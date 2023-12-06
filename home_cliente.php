@@ -31,15 +31,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             }
             .container{
                 width: 400px;
+                display: flex;
+                justify-content: center;
             }
             body{
                 background-position-x: left;
               background-image: url(imgs/background.png);
             }
-            
+            a{
+                background: none;
+            }
+             div{
+                display: flex;
+                margin-top: 30px;
+                margin-left: 30px;
+            }
         </style>
     </head>
     <body>
+        <div>
+        <a class="btn btn-danger" href="controller/logoutController.php">Sair</a>
+        </div>
         <br>
         <h1>Pedir prato</h1>
         <div class="container">
@@ -50,9 +62,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 <input type="text" class="form-control" name="nome-cozinheiro">
                 <label for="nome">Pesquise por ingredientes</label>
                 <input type="text" class="form-control" name="ingrediente">
-                <div>
+               
                     <input type="submit" value="Buscar" class="ola d-grid">
-                </div>
+                
 
             </form>
         </div>

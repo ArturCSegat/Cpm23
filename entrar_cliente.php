@@ -18,8 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             .bonito{
                 margin-top: 150px;
                 width: 400px;
-                border: solid;
-                border-color: #FF944E;
+                
             }
             .ola{
                 border: none;
@@ -33,9 +32,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 background-position-x: left;
               background-image: url(imgs/background.png);
             }
+            a{
+                background: none;
+            }
         </style>
     </head>
     <body>
+         <a href="home.php"><img src="imgs/logo.png" width="70px"></a>
         <form  method="post" action="controller/login_Cliente_Controller.php">   
             <div class="container bonito" >
                 <div>

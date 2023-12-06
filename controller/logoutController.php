@@ -4,5 +4,7 @@ if ($_REQUEST) {
     @session_destroy();
     @session_abort();
     setcookie("conta_id","", time()-100000,"/");
-    header('location:../index.php');
+    header('location:./home.php');
 }
+header('location:../home.php');
+?>

@@ -41,9 +41,21 @@
                 background-color: #C24600;
                 color: white;
             }
+            a{
+                
+                background: none;
+            }
+            div{
+                display: flex;
+                margin-top: 30px;
+                margin-left: 30px;
+            }
         </style>
     </head>
     <body>
+        <div>
+          <a class="btn btn-danger" href="controller/logoutController.php">Sair</a>
+        </div>
         <h1>Cadastrar prato</h1>
             <div class="container bonito">
                 <form method="post" action="controller/cadastroPrato.php">
