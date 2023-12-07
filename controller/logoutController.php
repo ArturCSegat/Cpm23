@@ -1,10 +1,9 @@
 <?php
-if ($_REQUEST) {
-    @session_start();
-    @session_destroy();
-    @session_abort();
-    setcookie("conta_id","", time()-100000,"/");
-    header('location:./home.php');
-}
-header('location:../home.php');
+   unset($_COOKIE['tipo']);
+   setcookie('tipo', '', time() - 3600, '/');
+
+   unset($_COOKIE['conta_id']);
+   setcookie('conta_id', '', time() - 3600, '/');
+
+   header('location:../index.php');
 ?>

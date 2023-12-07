@@ -50,6 +50,10 @@
                 margin-top: 30px;
                 margin-left: 30px;
             }
+
+            .pedido { 
+               margin: 5%;
+            }
         </style>
     </head>
     <body>
@@ -70,8 +74,38 @@
                     <input class="btn" type="submit" id="enviar" name="enviar">
                     
                 </form>
+
                 
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1>Pedidos</h1>
+            <div id="pedidos" style="display: flex; flex-direction: row;">
+                     <?php 
+                        ini_set('display_errors', '1');
+                        ini_set('display_startup_errors', '1');
+                        error_reporting(E_ALL);
+                        require_once("db_model/pedidoModel.php");
+
+                        $pedidos = Pedido::allFor($_COOKIE["conta_id"]);
+                        
+                        foreach ($pedidos as $pedido) {
+                           echo '
+                           <form method="POST" action="controller/deletarPedidoController.php" class="pedido" style="display: flex; flex-direction: column;">
+                                 <input style="display: none;" name="id" value="'.$pedido["id"].'">
+                                 <p>'.$pedido["prato_nome"].'</p>
+                                 <p>'.$pedido["preco"].'</p>
+                                 <p>'.$pedido["cliente_nome"].'</p>
+                                 <p>'.$pedido["endereco"].'</p>
+                                 <button type="submit">Confirmar</button>
+                           </form>
+                           ';
+                        }
+                        
+                     ?>
+                </div>
         <?php
                     //capturavam a variável query string "cod"
                     @$cod = $_REQUEST['cod'];

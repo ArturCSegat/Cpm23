@@ -72,14 +72,18 @@ if ($_POST) {
             '
                  
                     <tr>
-                     <td>' . $prato["nome"] . '</td>
-                     <td>' . $prato["descricao"] . '</td>
-                     <td>R$ ' . $prato["preco"] . '</td>
-                     <td>' . $prato["cozinheiro"]["nome"] . '</td>
-                     <td>' . $prato["cozinheiro"]["categoria"] . '</td>
+                       <form method="POST" action="controller/pedirController.php">
+                          <input style="display: none;" name="id" value='.$prato["id"].'>
+                          <input style="display: none;" name="id_coz" value='.$prato["cozinheiro"]["id"].'>
+                          <td>' . $prato["nome"] . '</td>
+                          <td>' . $prato["descricao"] . '</td>
+                          <td>R$ ' . $prato["preco"] . '</td>
+                          <td>' . $prato["cozinheiro"]["nome"] . '</td>
+                          <td>' . $prato["cozinheiro"]["categoria"] . '</td>
+                          <td><button type="submit">Pedir</button></td>
+                       </form>
                      </tr>
                      
-                  </div>
                   '
             );
         }

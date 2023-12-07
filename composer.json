@@ -1,6 +1,5 @@
 {
     "name": "arturcs/cpm23",
-    "description": "Cozinheiros perto de mim 2023 projeto de analise",
     "autoload": {
         "psr-4": {
             "Arturcs\\Cpm23\\": "src/"
