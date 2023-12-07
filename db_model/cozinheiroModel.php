@@ -1,5 +1,8 @@
 <?php
 
+   ini_set('display_errors', '1');
+   ini_set('display_startup_errors', '1');
+   error_reporting(E_ALL);
    require_once("conexaoMysql.php");
    require_once("clienteModel.php");
 
@@ -53,15 +56,15 @@
          $db = new ConexaoMysql();
          $db->Conectar();
 
-         $query = 'INSERT INTO cozinheiro(nome, email, senha, faixa_preco, avaliacao, endereco, categoria)
-         value(
+         $query = 'INSERT INTO cozinheiro(nome, email, senha, faixa_preco, endereco, categoria)
+         values(
             "'.$this->nome.'",
             "'.$this->email.'",
             "'.$this->senha.'",
             '.$this->faixa_preco.',
-          
             "'.$this->endereco.'",
             "'.$this->categoria.'");';
+
             try {
                $db->Executar($query);
             } catch (Exception $e) {
