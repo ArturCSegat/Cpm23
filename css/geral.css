@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 h1,p,h2,td,tr{
-    color: #C24600;
+    color: #c20d00;
     font-family: 'Oswald', sans-serif;
   
 
 }
+.ola {
+    color: #c20d00;
+}
 a{
     font-family: 'Oswald', sans-serif;
-    background: #f78243;
+    background: #ffffff;
     color: black;
     text-decoration: none;
 }

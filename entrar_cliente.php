@@ -26,11 +26,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 margin-bottom: 4px;
                 width: 300px;
                text-align: center;
-               background-color: #E8640D;
-            }
-            body{
-                background-position-x: left;
-              background-image: url(imgs/background.png);
+               background-color: white;
             }
             a{
                 background: none;

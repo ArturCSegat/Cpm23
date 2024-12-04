@@ -22,8 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                   text-align: center;
             }
             body{
-                background-position-x: left;
-              background-image: url(imgs/background.png);
+                background-color: white;
             }
         </style>
     </head>

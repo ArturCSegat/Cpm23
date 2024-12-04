@@ -37,6 +37,7 @@ create table if not exists cliente (
     cozinheiro_id int,
     cliente_id int,
     prato_id int,
+    confirmado int,
     primary key (id),
     foreign key (cozinheiro_id) references cozinheiro(id),
     foreign key (cliente_id) references cliente(id),

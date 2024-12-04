@@ -32,11 +32,6 @@
                 justify-content: center;
                 width: 400px;
             }
-            body{
-                background-position-x: left;
-                background-image: url(imgs/background.png);
-                text-align: center;
-            }
             .btn{
                 background-color: #C24600;
                 color: white;
@@ -91,22 +86,27 @@
 
                         $pedidos = Pedido::allFor($_COOKIE["conta_id"]);
                         
+                        echo "<div>";
                         if ($pedidos != null) {
-                           foreach ($pedidos as $pedido) {
-                              echo '
-                              <form method="POST" action="controller/deletarPedidoController.php" class="pedido" style="display: flex; flex-direction: column;">
-                                 <input style="display: none;" name="id" value="'.$pedido["id"].'">
-                                 <p>'.$pedido["prato_nome"].'</p>
-                                 <p>'.$pedido["preco"].'</p>
-                                 <p>'.$pedido["cliente_nome"].'</p>
-                                 <p>'.$pedido["endereco"].'</p>
+                            foreach ($pedidos as $pedido) {
+
+                                if ($pedido["confirmado"] != 1) {
+                                    echo '
+                              <form method="POST" action="controller/confirmarPedidoController.php" class="pedido" style="display: flex; flex-direction: column;">
+                                 <input style="display: none;" name="id" value="' . $pedido["id"] . '">
+                                 <p>' . $pedido["prato_nome"] . '</p>
+                                 <p>' . $pedido["preco"] . '</p>
+                                 <p>' . $pedido["cliente_nome"] . '</p>
+                                 <p>' . $pedido["endereco"] . '</p>
                                  <button type="submit">Confirmar</button>
                               </form>
                               ';
-                           }
+                                }
+                            }
                         } else {
                            echo "<h2>Nenhum pedido</h2>";
                         }
+                        echo "</div>";
                         
                      ?>
                 </div>
